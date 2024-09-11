@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Canvas App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Canvas Editor</h1>
+        <div class="toolbar">
+            <!-- Button to add default text -->
+            <button id="addTextBtn" class="toolbar-btn">Add Text</button>
+
+            <!-- Font Size Selector -->
+            <label for="fontSize" class="toolbar-label">Font Size: </label>
+            <input type="number" id="fontSize" class="toolbar-input" min="10" max="100" value="20">
+
+            <!-- Font Style Selector -->
+            <label for="fontStyle" class="toolbar-label">Font Style: </label>
+            <select id="fontStyle" class="toolbar-input">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+
+            <!-- Undo and Redo buttons -->
+            <button id="undoBtn" class="toolbar-btn">
+                <span class="icon">&#9664;</span>
+            </button>
+            <button id="redoBtn" class="toolbar-btn">
+                <span class="icon">&#9654;</span>
+            </button>
+        </div>
+        
+        <!-- Canvas where text will be drawn -->
+        <canvas id="textCanvas" width="800" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
